@@ -1,0 +1,244 @@
+/* BOUTONS IMPORTATION */
+
+.label-file {
+	margin-left: auto;
+	margin-right: auto;
+    cursor: pointer;
+	border-radius: 15px 15px 0px 0px;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+.input-file {
+    display: none;
+}
+
+#importationToggle{
+	margin-left: 0px;
+	background-color: rgba(255, 255, 255, 0.70);
+}
+@media all and (min-width:768px){
+	#importationToggle{
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+#importationToggle:hover{
+	font-size: 1em;
+	background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Le message lors d'une modification des fichiers */
+.msgImport{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: auto;
+	max-width: max-content;
+	background-color: rgba(255, 255, 255, 0.85);
+	border-radius: 20px;
+	padding: 4px 20px;
+	font-size: 1.1em;
+	text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mkdirText{
+	width: 15rem;
+	border-radius: 15px 0px 0px 15px;
+	padding-left: 10px;
+	font-size: 1.1rem;
+	box-shadow:inset 0 -3px 10px rgba(0,0,0,0.15), 0 1px 0px;
+	transition: all 0.2s;
+}
+
+.mkdirText:hover, .mkdirText:focus{
+	box-shadow:none;
+}
+
+.mkdir{
+	font-weight: bold;
+	font-size: 1.1rem;
+	box-shadow: inset 0 -8px 6px rgba(0,0,0,0.1), 1px 1px 3px
+}
+
+.mkdir:hover{
+	background-color: rgba(255, 255, 255);
+	padding:4px 14px 4px 5px;
+	box-shadow:0 1px 0px;
+	font-size: 1.2rem;
+}
+
+#newDirectory{
+	background-color: rgba(255, 255, 255, 0.75);
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#newDirectory:hover{
+	background-color: rgba(255, 255, 255, 0.95);
+}
+
+@media all and (max-width:768px){
+	.mkdirText{
+		font-size: 0.9rem;
+	}
+	.mkdir{
+		font-size: 0.9rem;
+	}
+	.mkdir:hover{
+		padding:4px 14px 4px 9px;
+		font-size: 1rem;
+	}
+	.msgImport{
+		font-size: 1em;
+	}
+}
+
+
+/* Bouton pour afficher le formulaire de Renommage et de Suppression */
+
+.paramfiles_button{
+	display: block;
+	position: absolute;
+	margin-top: 8px;
+	margin-left: 100px;
+	z-index:1;
+	background-color:rgba(255, 255, 255, 0.623);
+	background-image: url("../image/Gear-icon.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    height: 50px;
+    width: 50px;
+	border:solid 2px;
+	border-radius:8px;
+	background-position: center;
+	box-shadow: inset 0px -4px 8px rgba(0,0,0,0.3);
+	transition: all 0.2s;
+}
+
+.paramfiles_button:hover{
+	cursor:pointer;
+	height: 60px;
+	width: 60px;
+	box-shadow: inset 2px -8px 4px rgba(0,0,0,0.3), -2px 2px 3px
+}
+
+@media all and (max-width:768px){
+	.paramfiles_button{
+		height: 35px;
+		width: 35px;
+	}
+
+	.paramfiles_button:hover{
+		cursor:pointer;
+		height: 42px;
+		width: 42px;
+		box-shadow: inset 2px -8px 4px rgba(0,0,0,0.3), -2px 2px 3px
+	}
+}
+
+
+/* Spécifications Suppression */
+.paramdelete_button{
+	margin-top: 8px;
+	background-image: url("../image/trash-bin.png");
+	margin-left: 10px;
+}
+
+/* Choix des formulaires Parametres */
+.paramAllChoicesAdm{
+	display: block;
+	width:inherit;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.paramChoiceAdm button{
+	background-color: rgba(255, 255, 255, 0.74);
+	font-weight: bold;
+	border: solid #050505 1px;
+	box-shadow: inset 2px -4px 1px rgba(0,0,0,0.15);
+	padding:0.35em 0.85em 0.35em 0.85em;
+	border-radius: 60px;
+	transition: all 0.2s;
+	margin-top:20px;
+}
+
+.paramChoiceAdm button:hover{
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.95);
+	box-shadow: inset 3px -4px 3px rgba(0,0,0,0.25), -2px 2px 4px rgb(0, 0, 0);
+	font-size: 1.2em;
+	padding: 0.25em 0.75em 0.25em 0.75em;
+}
+
+
+/* Les boutons valider et annuler (Renommage et Suppression) */
+
+.renameButtons{
+	margin-top:10px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto
+}
+
+
+/*TOOLTIP*/
+
+  /* Tooltip text */
+.tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+  
+	/* Position the tooltip text */
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -60px;
+  
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+  
+  /* Tooltip arrow */
+.tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+.paramfiles_button:hover .tooltiptext {
+	visibility:visible;
+	opacity: 1;
+}
+
+.img_bloc{
+	margin-top: 40px;
+}
+
+@media all and (max-width:768px){
+	.img_bloc{
+		margin-top: 25px;
+	}
+}
+
+
+.bloc_choice{
+	padding-top: 30px;
+}
